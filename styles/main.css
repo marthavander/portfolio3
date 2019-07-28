@@ -1,0 +1,267 @@
+body {
+  vertical-align: top;
+  margin-top: 0;
+  padding-bottom: 5rem;
+  font-family: 'PT Sans', sans-serif;
+  font-size: 18px;
+  color: #4a4a4a;
+}
+
+nav {
+  display:inline-block;
+  vertical-align: top;
+}
+
+.navmenu {
+  height: 8vh;
+  vertical-align: top;
+  background-color: #ffffff;
+  list-style-type: none;
+  display: inline;
+  position:fixed;
+  width: 100%;
+  text-decoration: none;
+  margin-top: 0;
+  padding-top: 1.25em;
+  padding-bottom: 0;
+  padding-left: 0;
+  border-bottom: 1px solid #4a4a4a;
+}
+
+.mvmlogo  {
+  width: 142px;
+  height:auto;
+  float: left;
+  display: inline;
+  margin-left: 1em;
+}
+@media only screen and (max-width: 768px) {
+  .mvmlogo {
+    width: 90px;
+    padding-top: .7em;
+  }
+}
+@media only screen and (max-width: 414px) {
+  .mvmlogo {
+    margin-left: 1.5em;
+  }
+}
+@media only screen and (max-width: 320px) {
+  .mvmlogo {
+    margin-left: 1em;
+  }
+}
+
+.navitem  {
+  padding: 0;
+  float: right;
+  display: inline;
+  text-decoration: none;
+  color: #4a4a4a;
+  font-size: 1em;
+  padding-top: 1em;
+  margin-right: 3em;
+}
+@media only screen and (max-width: 414px) {
+  .navitem {
+    margin-right: 1.5em;
+  }
+}
+@media only screen and (max-width: 320px) {
+  .navitem {
+    margin-right: 1em;
+  }
+}
+
+a.navlink {
+  display: inline;
+  text-decoration: none;
+  color: #4a4a4a;
+}
+
+a.navlink:hover  {
+  color: #7148A3;
+  font-weight: bold;
+}
+
+section.main-container  {
+  margin: 7% 25%;
+}
+@media screen and (max-width: 1024px) {
+  section.main-container  {
+    margin: 10% 25%;
+  }
+}
+
+ h1 {
+   color: #4a4a4a;
+   font-weight: bold;
+   font-size: 2em;
+   line-height: 1.25em;
+   margin-bottom: .1em;
+ }
+ @media screen and (max-width: 1024px) {
+   h1 {
+
+   }
+ }
+ @media screen and (max-width: 768px) {
+   h1 {
+   }
+ }
+ @media screen and (max-width: 414px) {
+    h1 {
+    }
+  }
+
+ .slogan {
+   margin-top: 0;
+   padding-top: 0;
+   color: #4a4a4a;
+   font-weight: lighter;
+   font-size: 1.5em;
+   line-height: 1.6em;
+   padding-bottom: .5em;
+ }
+ @media screen and (max-width: 1024px) {
+    .slogan {
+      font-size: 1em;
+    }
+  }
+  @media screen and (max-width: 414px) {
+     .slogan {
+       font-size: 1em;
+     }
+   }
+
+   img {
+     width: auto;
+     max-width: 100%;
+     height: auto;
+   }
+
+  div.project1 {
+    background-image: url(/images/healthloghome.png);
+    margin: 0;
+    padding: 0;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    display:inline;
+}
+  }
+
+ h2.project-descrip-head-left {
+   font-family: 'PT Sans Narrow', sans-serif;
+   font-size: 2.125em;
+   color: #ffffff;
+   margin-left: .6em;
+   margin-bottom: .125em;
+ }
+ @media screen and (max-width: 1024px) {
+   main.mdl-layout__content {
+     font-family: 'PT Sans Narrow', sans-serif;
+     font-size: 2.125em;
+     color: #ffffff;
+     margin: 0;
+   }
+ }
+ @media screen and (max-width: 768px) {
+   main.mdl-layout__content {
+     font-family: 'PT Sans Narrow', sans-serif;
+     font-size: 2em;
+     color: #ffffff;
+     margin: 0;
+   }
+ }
+ @media screen and (max-width: 414px) {
+   main.mdl-layout__content {
+     font-family: 'PT Sans Narrow', sans-serif;
+     font-size: 1.5em;
+     color: #ffffff;
+     margin: 0;
+   }
+ }
+
+  p.project-description-left {
+    padding: 0;
+    margin-left: 1em;
+    margin-right: 12em;
+    font-size: 1.375em;
+    color: #ffffff;
+    text-align: left;
+    line-height: 1.375em;
+  }
+  @media screen and (max-width: 768px) {
+     p.project-description-left {
+       margin-right: 4em;
+     }
+
+  .project img {
+    width: 100%;
+  }
+
+  button.view-case-study  {
+    border: none;
+    padding: 12px 12px;
+    font-size: .88em;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    background-color: #ffffff;
+    color: #047087;
+    margin-top: .5em;
+    margin-left: 1.5em;
+  }
+  @media screen and (max-width: 1024px) {
+    button.view-case-study  {
+      border: none;
+      padding: 12px 12px;
+      font-size: .88em;
+      font-weight: bold;
+      text-align: center;
+      text-decoration: none;
+      background-color: #ffffff;
+      color: #047087;
+      margin-top: .5em;
+      margin-left: 1.5em;
+    }
+  }
+  button.view-case-study:hover  {
+    background-color: #B2E0EA;
+  }
+
+  footer.footer-main  {
+    height: 6vh;
+    vertical-align: bottom;
+    background-color: #F2F2F2;
+    list-style-type: none;
+    display: inline;
+    width: 100%;
+    height: auto;
+    list-style-type: none;
+  }
+
+  ul.footer-info  {
+    height: 6vh;
+    vertical-align: bottom;
+    background-color: #F2F2F2;
+    list-style-type: none;
+    display: inline;
+    width: 100%;
+    height: auto;
+    list-style-type: none;
+  }
+
+ li.footer-text  {
+   list-style-type: none;
+   display: inline;
+   color: #4a4a4a;
+   text-align: left;
+   float: left;
+ }
+
+ li.footer-social {
+   list-style-type: none;
+   float: right;
+   display: inline;
+ }
