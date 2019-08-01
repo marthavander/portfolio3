@@ -605,25 +605,30 @@ h2  {
 .cs-title  {
   margin-top: .25em;
 }
-.cs-container2 {
-  margin: auto;
-  width: 100%;
-  display:inline;
-  }
 .cs-top-image {
   margin: 1em auto 0;
   max-width: 100%;
   height:auto;
   }
+.cs-container2 {
+  display: inline;
+  width: 100%;
+  }
 .cs-summary  {
   background-color: #EDF4F5;
-  display:inline-block;
-  max-width: 70%;
+  display: inline-block;
+  float:left;
+  width: 40%;
+  padding-left: 15%;
+  padding-right: 5%;
 }
 .cs-specs  {
-  background-color: #7148A3;
+  float: right;
   display:inline-block;
-  max-width: 30%;
+  background-color: #7148A3;
+  width: 20%;
+  padding-right: 15%;
+  padding-left: 5%;
 }
 h4  {
   font-weight: 700;
@@ -631,14 +636,11 @@ h4  {
   font-size: 1.5em;
 }
 .cs-summary-head {
-  margin: auto;
 }
 .cs-summary-text  {
   font-size: 1em;
   line-height: 1.5em;
-  margin: auto;
-  max-width: 30em;
-  padding-right: 2em;
+  padding-right: 5%;
 }
 .cs-summary-button {
   border: none;
@@ -649,7 +651,6 @@ h4  {
   text-decoration: none;
   color: #ffffff;
   margin-bottom: 2em;
-  margin-left: 5.75em;
 }
 .cs-summary-button:hover {
   background-color: #047087;
