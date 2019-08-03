@@ -219,16 +219,17 @@ div.project3 {
      padding-bottom: 6.5em;
    }
  }
-h3  {
+h2  {
     font-family: 'PT Sans Narrow', sans-serif;
     font-size: 2.125em;
+    font-weight: 400;
   }
   @media screen and (max-width: 450px) {
-     h3 {
+     h2 {
       font-size: 1.5em;
      }
    }
- h3.project-head-left {
+ h2.project-head-left {
    margin-top: 0;
    font-size: 2.125em;
    color: #ffffff;
@@ -236,25 +237,25 @@ h3  {
    margin-bottom: .125em;
  }
  @media screen and (max-width: 768px) {
-    h3.project-head-left {
+    h2.project-head-left {
      max-width: 40%;
      font-size: 1.85em;
      margin-left: .4em;
     }
   }
   @media screen and (max-width: 450px) {
-     h3.project-head-left {
+     h2.project-head-left {
       max-width: 40%;
       font-size: 1.75em;
       margin-left: .4em;
      }
    }
    @media screen and (max-width: 380px) {
-      h3.project-head-left {
+      h2.project-head-left {
        font-size: 1.5em;
      }
    }
- h3.project-head-right {
+ h2.project-head-right {
    margin-top: 0;
    font-size: 2.125em;
    color: #ffffff;
@@ -265,13 +266,13 @@ h3  {
    max-width: 40%;
  }
  @media screen and (max-width: 768px) {
-    h3.project-head-right {
+    h2.project-head-right {
      font-size: 1.85em;
      margin-right: 2.6em;
     }
   }
   @media screen and (max-width: 450px) {
-     h3.project-head-right {
+     h2.project-head-right {
       max-width: 40%;
       font-size: 1.75em;
      }
@@ -422,8 +423,6 @@ h3  {
     width: 100%;
     position: relative;
     bottom: 0;
-    margin-top: -12em;
-    margin-bottom: -.5em;
   }
   ul.footer-info  {
     float:right;
@@ -593,26 +592,28 @@ padding-top: 4em;
   }
   }
   /* HEALTHLOG PAGE */
-.cs-container1 {
-  margin: 5em auto 2em;
+.cs-container-title {
+  margin: 5em auto 3em;
   padding-top: 3em;
   max-width: 50em;
   }
-h2  {
-  font-family: 'PT Sans Narrow', sans-serif;
-  font-size: 2.25em;
-}
 .cs-title  {
   margin-top: .25em;
+  font-size: 2.5em;
+  font-weight: 700;
 }
 .cs-top-image {
   margin: 1em auto 0;
-  max-width: 100%;
+  width: 100%;
   height:auto;
   }
-.cs-container2 {
-  display: inline;
+.cs-container-summary {
+  display: flex;
   width: 100%;
+  }
+p {
+    font-size: 1em;
+    line-height: 1.5em;
   }
 .cs-summary  {
   background-color: #EDF4F5;
@@ -622,27 +623,29 @@ h2  {
   padding-left: 15%;
   padding-right: 5%;
 }
-.cs-specs  {
-  float: right;
-  display:inline-block;
-  background-color: #7148A3;
-  width: 20%;
-  padding-right: 15%;
-  padding-left: 5%;
-}
-h4  {
+h3  {
   font-weight: 700;
   color: #3A4BA2;
   font-size: 1.5em;
+  margin-bottom: 0;
 }
-.cs-summary-head {
+.cs-head {
+margin-top: 1em;
+margin-bottom: .25em;
+line-height: 1.5em;
 }
-.cs-summary-text  {
+.cs-head1 {
+  margin-top: 1.75em;
+  margin-bottom: .25em;
+  line-height: 1.5em;
+}
+.cs-text  {
   font-size: 1em;
   line-height: 1.5em;
-  padding-right: 5%;
+  margin-top: 0;
+  margin-bottom: 1.75em;
 }
-.cs-summary-button {
+.cs-button {
   border: none;
   padding: 11px 14px;
   font-size: .88em;
@@ -650,22 +653,192 @@ h4  {
   font-weight: 700;
   text-decoration: none;
   color: #ffffff;
-  margin-bottom: 2em;
 }
-.cs-summary-button:hover {
+.cs-button:hover {
   background-color: #047087;
   color: #ffffff;
 }
-.specs-head{
+.cs-specs  {
+  float: right;
+  display:inline-block;
+  background-color: #7148A3;
+  width: 20%;
+  padding-right: 15%;
+  padding-left: 5%;
+  padding-bottom: 5em;
+}
+.cs-specs-head {
   color: #ffffff;
   line-height: 1.5em;
-  margin-bottom: 0;
+  margin-top: 1em;
+  margin-bottom: .25em;
+  }
+.cs-specs-head1{
+  color: #ffffff;
+  line-height: 1.5em;
+  margin-top: 1.75em;
+  margin-bottom: .25em;
 }
-.specs-text {
+.cs-specs-text {
   color:#ffffff;
   font-size: 1em;
   line-height: 1.5em;
 }
 .specs-list {
   list-style: none;
+}
+.cs-container  {
+  margin: 3em auto;
+  max-width: 50em;
+}
+.cs-section-head {
+  margin-top: 0;
+  color: #047087;
+  border-bottom: 1px solid #4a4a4a;
+  margin-bottom: 1em;
+  padding-top: 0;
+}
+.cs-text-left  {
+  float:left;
+  font-size: 1em;
+  line-height: 1.5em;
+  margin-top: 0;
+  margin-bottom: 1.75em;
+  width: 60%;
+}
+.callout-1  {
+  color: #7148A3;
+  font-family: 'PT Sans Narrow', sans-serif;
+  font-size: 1.6em;
+  line-height: 1.5em;
+  font-weight: 400;
+  float: right;
+  width: 30%;
+  margin-top: 0;
+  padding-bottom: 3em;
+}
+.cs-persona-pic {
+  padding-top: 1.25em;
+  padding-bottom: 3em;
+  padding-right: 0;
+  margin-right: 0;
+  float: left;
+  padding-left: 0;
+  margin-left: 0;
+  display: inline-block;
+}
+.cs-persona-text  {
+  float: left;
+  width: 60%;
+  padding-right: 12%;
+  margin-left: 0;
+  padding-left: 2em;
+  display: inline-block;
+  margin-left: 0;
+}
+.cs-persona-text-spacebottom  {
+  float: left;
+  width: 60%;
+  padding-right: 12%;
+  margin-left: 0;
+  padding-left: 2em;
+  display: inline-block;
+  margin-left: 0;
+  margin-bottom: 2em;
+}
+.cs-text-left-spaceright  {
+  float:left;
+  font-size: 1em;
+  line-height: 1.5em;
+  margin-top: 0;
+  margin-bottom: 1.75em;
+  width: 60%;
+  display: block;
+  padding-right: 40%;
+}
+.competitors  {
+  display:inline-block;
+  width: 100%;
+}
+.competitive-logo  {
+  float: left;
+  width: 30%;
+  padding: .25em 1.5em;
+
+}
+.callout-2  {
+  color: #7148A3;
+  font-family: 'PT Sans Narrow', sans-serif;
+  font-size: 1.6em;
+  line-height: 1.5em;
+  font-weight: 400;
+  width: 60%;
+  margin-top: 0;
+  padding-bottom: .25em;
+  padding-left: 0;
+  margin-left: 0;
+  padding-right: 40%;
+}
+.cs-list  {
+  margin-bottom: 2em;
+}
+.cs-prebullet-text {
+  padding-right: 40%;
+  font-size: 1em;
+  line-height: 1.5em;
+  margin-top: 0;
+  margin-bottom: 0;
+  width: 60%;
+}
+.cs-text-list {
+  font-size: 1em;
+  line-height: 1.5em;
+  margin-top: 0;
+  margin-bottom: .5em;
+  width: 60%;
+  padding-left: .5em;
+}
+.user-flows-image {
+  width: 100%;
+  height: auto;
+  padding-top: 2em;
+  padding-bottom: .5em;
+}
+.competitive-analysis {
+  width:100%;
+}
+.cs-full-image{
+  max-width: 100%;
+  padding: 3em 0;
+  display: block;
+  margin: auto;
+}
+.cs-container-gray  {
+  background-color: #F2F2F2;
+  width: 100%;
+  height: auto;
+  margin: 3em auto;
+  display: flex;
+}
+.logo-ideas-row {
+  margin: auto;
+  display:inline-block;
+}
+.logo-ideas1{
+  display: inline-block;
+  padding: 3em 2em;
+  vertical-align: top;
+}
+.logo-ideas2{
+  display: inline-block;
+  padding: 3em 2em;
+  width: 249px;
+  height: auto;
+  vertical-align: top;
+}
+.space-bottom1{
+  padding-bottom: 2em;
+}
+.space-bottom2{
+  padding-top: 2em;
 }
