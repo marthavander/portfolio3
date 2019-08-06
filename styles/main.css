@@ -905,11 +905,21 @@ strong {
   width:100%;
 }
 .cs-full-image{
-  width: 60%;
+  width: 70%;
   height: auto;
   margin: 0 auto;
   padding-top: 2em;
   padding-bottom: 2em;
+}
+@media screen and (max-width: 1440px){
+  .cs-full-image  {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 768px){
+  .cs-full-image  {
+    width: 95%;
+  }
 }
 .cs-container-gray  {
   background-color: #F2F2F2;
