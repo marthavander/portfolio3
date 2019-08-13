@@ -1,3 +1,11 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+html, body {
+    height:100%;
+  }
+
 body {
   margin-top: 0;
   font-family: 'PT Sans', sans-serif;
@@ -11,7 +19,7 @@ body {
 nav {
   background-color: #ffffff;
   vertical-align: top;
-  width: 100%;
+  width: 100vw;
   position:fixed;
   margin-top: -5em;
   display: inline-block;
@@ -24,6 +32,11 @@ nav {
     padding-left: 0;
     padding-bottom: .5em;
     padding-top: .5em;
+  }
+}
+@media only screen and (max-width: 450px) {
+  nav {
+    padding-bottom: .25em;
   }
 }
 ul.navmenu {
@@ -433,12 +446,12 @@ h2  {
   @media screen and (max-width: 768px) {
     ul.footer-info {
       padding-left: 0;
-      margin: .75em 0em .5em;
+      margin: .75em .5em .5em;
      }
    }
   @media screen and (max-width: 450px) {
     ul.footer-info {
-      margin: .75em 0em .5em;
+      margin: .75em .25em .5em;
       }
     }
   p.footer-text  {
@@ -465,7 +478,7 @@ h2  {
   }
 @media screen and (max-width: 450px) {
     li.footer-social {
-      margin: .25em .15em 0em;
+      margin: .25em .25em 0em;
      }
    }
  @media screen and (max-width: 450px) {
@@ -657,7 +670,6 @@ p {
 .cs-summary  {
   background-color: #EDF4F5;
   display: inline-block;
-  width: 40%;
   padding-left: 10%;
   padding-right: 5%;
 }
@@ -665,7 +677,6 @@ p {
 .cs-summary  {
   display: block;
   padding: .5em 3em 1em;
-  width: 85%;
 }
 }
 @media screen and (max-width: 450px) {
@@ -674,7 +685,6 @@ p {
   padding-left: 2em;
   padding-bottom: .5em;
   padding-right: 4em;
-  width: 85%;
 }
 }
 @media screen and (max-width: 380px) {
@@ -683,7 +693,6 @@ p {
   padding-left: 1.5em;
   padding-bottom: .5em;
   padding-right: 2em;
-  width: 85%;
 }
 }
 h3  {
@@ -730,10 +739,10 @@ margin-bottom: .25em;
 .cs-specs-all {
   display: inline-block;
   background-color: #7148A3;
-  width: 30%;
   padding-left: 5%;
   padding-right: 10%;
   padding-bottom: 4em;
+  box-sizing: border-box;
 }
 @media screen and (max-width:768px) {
 .cs-specs-all  {
@@ -914,16 +923,16 @@ strong {
   padding-left: 0;
   margin-left: 0;
   vertical-align: top;
-
+  width: 20%;
 }
 @media screen and (max-width: 768px){
   .cs-persona-pic  {
-    float: none;
     width: 30%;
     margin: 0 auto;
     display: block;
     padding-bottom: .5em;
     padding-top: .5em;
+    float: none;
   }
 }
 @media screen and (max-width: 450px){
@@ -938,30 +947,28 @@ strong {
 }
 .cs-persona-text  {
   float: left;
-  width: 60%;
   padding-right: 15%;
   padding-left: 2em;
   margin-left: 0;
   margin-bottom: 1.5em;
   vertical-align: top;
   margin-top: 0;
+  width: 80%;
 }
 @media screen and (max-width: 768px){
   .cs-persona-text  {
-    float: none;
-    width: 100%;
+    padding-right: 0;
     padding-left: 0;
+    width: 100%;
   }
 }
 @media screen and (max-width: 450px){
   .cs-persona-text  {
-    padding-right: 0;
-    padding-left: 0;
+
   }
 }
 .cs-persona-text-spacebottom  {
   float: left;
-  width: 60%;
   padding-right: 20%;
   margin-left: 2em;
   margin-left: 0;
@@ -987,14 +994,13 @@ strong {
   line-height: 1.5em;
   margin-top: 0;
   margin-bottom: 1.75em;
-  width: 60%;
   display: block;
   padding-right: 40%;
 }
 @media screen and (max-width: 768px){
   .cs-text-left-spaceright  {
-    width: 100%;
     float: none;
+    padding-right: 0;
   }
 }
 .cs-text-left-spaceright2  {
@@ -1003,19 +1009,17 @@ strong {
   line-height: 1.5em;
   margin-top: 0;
   margin-bottom: 0;
-  width: 60%;
   display: block;
   padding-right: 40%;
 }
 @media screen and (max-width: 768px){
   .cs-text-left-spaceright2  {
-    width: 100%;
     float: none;
+    padding-right: 0;
   }
 }
 .competitors  {
   display:inline-block;
-  width: 100%;
 }
 .competitive-logo  {
   display:inline-block;
@@ -1045,7 +1049,6 @@ strong {
   font-size: 1.6em;
   line-height: 1.5em;
   font-weight: 400;
-  width: 60%;
   margin-top: 0;
   padding-bottom: .25em;
   padding-left: 0;
@@ -1054,7 +1057,7 @@ strong {
 }
 @media screen and (max-width: 768px){
   .callout-2  {
-    width: 100%;
+  padding-right: 0;
   }
 }
 .cs-list  {
@@ -1067,11 +1070,10 @@ strong {
   line-height: 1.5em;
   margin-top: 0;
   margin-bottom: .5em;
-  width: 60%;
 }
 @media screen and (max-width: 768px){
   .cs-prebullet-text  {
-    width: 100%;
+    padding-right: 0;
   }
 }
 .cs-text-list {
@@ -1079,53 +1081,23 @@ strong {
   line-height: 1.5em;
   margin-top: 0;
   margin-bottom: .5em;
-  width: 60%;
   padding-left: .25em;
+  padding-right: 40%;
 }
 @media screen and (max-width: 768px){
   .cs-text-list  {
-    width: 100%;
+    padding-right: 0;
   }
 }
 .user-flows-image1 {
-  width: 100%;
-  height: auto;
-  padding-top: 2em;
-  padding-bottom: .5em;
-  display: block;
-}
-@media screen and (max-width: 768px){
-  .user-flows-image1  {
-    width: 100%;
-    height: auto;
-    margin: 0 auto;
-    display: none;
-  }
-}
-.user-flows-image2 {
-  width: 100%;
-  height: auto;
-  padding-top: 2em;
-  padding-bottom: .5em;
-  display: none;
-}
-@media screen and (max-width: 768px){
-  .user-flows-image2  {
-    width: 100%;
-    height: auto;
-    margin: 0 auto;
-    display: block;
-  }
-}
-@media screen and (max-width: 450px){
-  .user-flows-image2  {
-    padding-top: 1em;
-    padding-bottom: 0;
-    margin-bottom: 0;
-  }
+  background-image: url(../images/user-flows.png);
+  background-size: cover;
+  min-height: 10em;
+  background-repeat: no-repeat;
+  padding: 0;
+  margin-top: 4em;
 }
 .competitive-analysis {
-  width:100%;
 }
 .cs-full-image{
   width: 70%;
@@ -1174,12 +1146,14 @@ strong {
 @media screen and (max-width: 1440px){
   .cs-hi-fi2  {
     width: 80%;
+    height: auto;
     display: none;
   }
 }
 @media screen and (max-width: 768px){
   .cs-hi-fi2  {
     width: 95%;
+    height: auto;
     display: block;
   }
 }
@@ -1209,16 +1183,31 @@ strong {
 @media screen and (max-width: 450px){
   .cs-hi-fi3  {
     width: 95%;
+    height: auto;
     display: block;
   }
 }
+.user-flows-image1 {
+  background-image: url(../images/user-flows.png);
+  background-size: cover;
+  min-height: 10em;
+  background-repeat: no-repeat;
+  padding: 0;
+  margin-top: 4em;
+}
+
 .cs-sketch-wires1{
-  width: 70%;
+  max-width: 70%;
   height: auto;
   margin: 0 auto;
   padding-top: 2em;
   padding-bottom: 2em;
   display: block;
+}
+@media screen and (max-width: 1024px){
+  .cs-sketch-wires1  {
+    max-width: 80%;
+  }
 }
 @media screen and (max-width: 768px){
   .cs-sketch-wires1  {
@@ -1237,12 +1226,13 @@ strong {
   .cs-sketch-wires2  {
     display: block;
     width: 70%;
+    height: auto;
   }
 }
 @media screen and (max-width: 450px){
   .cs-sketch-wires2  {
     display: block;
-    width: 100%;
+    width: 95%;
   }
 }
 .cs-full-image2  {
@@ -1251,15 +1241,20 @@ strong {
   margin: 0 auto;
   padding-top: 2em;
   padding-bottom: 2em;
+  display: block;
 }
 @media screen and (max-width: 900px){
   .cs-full-image2  {
     width: 80%;
+    height: auto;
+    display: block;
   }
 }
 @media screen and (max-width: 450px){
   .cs-full-image2  {
     width: 90%;
+    height: auto;
+    display: block;
   }
 }
 .mktg-pref1 {
@@ -1274,6 +1269,7 @@ strong {
 @media screen and (max-width: 1440px){
   .mktg-pref1  {
     width: 80%;
+    height: auto;
     display: block;
   }
 }
@@ -1298,12 +1294,14 @@ strong {
 @media screen and (max-width: 768px){
   .mktg-pref2  {
     width: 80%;
+    height: auto;
     display: block;
   }
 }
 @media screen and (max-width: 450px){
   .mktg-pref2  {
     width: 100%;
+    height: auto;
     display: block;
   }
 }
@@ -1388,7 +1386,7 @@ strong {
 
 /* RIDERTIME */
 .cs-rt-prototypes  {
-  width: 80%;
+  max-width: 60%;
   height: auto;
   margin: 0 auto;
   padding-top: 2em;
@@ -1426,7 +1424,7 @@ strong {
   }
 }
 .cs-rt-visualdesign  {
-    width: 70%;
+    max-width: 65%;
     height: auto;
     margin: 0 auto;
     padding-top: 2em;
@@ -1435,13 +1433,13 @@ strong {
   }
   @media screen and (max-width: 900px){
     .cs-rt-visualdesign  {
-      width: 80%;
+      max-width: 80%;
       display: block;
     }
   }
   @media screen and (max-width: 768px){
     .cs-rt-visualdesign  {
-      width: 95%;
+      max-width: 95%;
       display: none;
     }
   }
@@ -1460,7 +1458,7 @@ strong {
 @media screen and (max-width: 768px){
   .cs-rt-visualdesign-mobile  {
     display: block;
-    width: 60%;
+    max-width: 60%;
   }
 }
 @media screen and (max-width: 450px){
