@@ -451,7 +451,10 @@ h2  {
    }
   @media screen and (max-width: 450px) {
     ul.footer-info {
-      margin: .75em .25em .5em;
+      float: none;
+      margin: 0 auto .75em;
+      display: block;
+      text-align: center;
       }
     }
   p.footer-text  {
@@ -463,6 +466,9 @@ h2  {
  @media screen and (max-width: 450px) {
    p.footer-text  {
     font-size: .75em;
+    float: none;
+    text-align: center;
+    margin: 1em auto .5em;
     }
   }
  li.footer-social {
@@ -478,13 +484,18 @@ h2  {
   }
 @media screen and (max-width: 450px) {
     li.footer-social {
-      margin: .25em .25em 0em;
+      float: none;
+      display:inline-block;
+      position: relative;
      }
    }
  @media screen and (max-width: 450px) {
     .social-icon  {
       max-width: 30px;
-      height: auto;
+      margin: 0 auto;
+      padding: 0;
+      float: none;
+      display:inline-block;
      }
     }
 
@@ -802,7 +813,6 @@ float: none;
   @media screen and (max-width: 768px) {
   .cs-specs-head  {
     margin-bottom: .25em;
-
   }
   }
 .cs-specs-head1{
@@ -962,11 +972,6 @@ strong {
     width: 100%;
   }
 }
-@media screen and (max-width: 450px){
-  .cs-persona-text  {
-
-  }
-}
 .cs-persona-text-spacebottom  {
   float: left;
   padding-right: 20%;
@@ -1117,87 +1122,79 @@ strong {
   }
 }
 .cs-hi-fi1{
-  width: 70%;
-  height: auto;
-  margin: 0 auto;
-  padding-top: 2em;
-  padding-bottom: 2em;
+  background-image: url(../images/hi-fi-1.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  margin: -3em auto;
+  padding: 40%;
   display: block;
 }
 @media screen and (max-width: 1440px){
   .cs-hi-fi1  {
-    width: 80%;
-    display: block;
+    margin: -2em auto;
   }
 }
 @media screen and (max-width: 768px){
   .cs-hi-fi1  {
-    display: none;
-  }
-}
-.cs-hi-fi2{
-  width: 70%;
-  height: auto;
-  margin: 0 auto;
-  padding-top: 2em;
-  padding-bottom: 2em;
-  display: none;
-}
-@media screen and (max-width: 1440px){
-  .cs-hi-fi2  {
-    width: 80%;
-    height: auto;
-    display: none;
-  }
-}
-@media screen and (max-width: 768px){
-  .cs-hi-fi2  {
-    width: 95%;
-    height: auto;
+    background-image: url(../images/hi-fi-2.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 10% 10%;
+    margin: 2em auto;
+    padding: 70%;
     display: block;
   }
 }
 @media screen and (max-width: 450px){
-  .cs-hi-fi2  {
-    display: none;
-  }
-}
-.cs-hi-fi3{
-  width: 70%;
-  height: auto;
-  margin: 0 auto;
-  padding-top: 2em;
-  padding-bottom: 2em;
-  display: none;
-}
-@media screen and (max-width: 1440px){
-  .cs-hi-fi3  {
-    display: none;
-  }
-}
-@media screen and (max-width: 768px){
-  .cs-hi-fi3  {
-    display: none;
-  }
-}
-@media screen and (max-width: 450px){
-  .cs-hi-fi3  {
-    width: 95%;
-    height: auto;
+  .cs-hi-fi1  {
+    background-image: url(../images/hi-fi-3.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 3% 3%;
+    margin: 2em auto;
+    padding: 150%;
     display: block;
   }
 }
-.user-flows-image1 {
-  background-image: url(../images/user-flows.png);
-  background-size: cover;
-  min-height: 10em;
-  background-repeat: no-repeat;
-  padding: 0;
-  margin-top: 4em;
-}
-
 .cs-sketch-wires1{
-  max-width: 70%;
+  background-image: url(../images/hl-sketch-to-wires.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  margin: 0 auto;
+  padding: 35%;
+  display: block;
+}
+@media screen and (max-width: 1024px){
+  .cs-sketch-wires1  {
+    padding: 40%;
+  }
+}
+@media screen and (max-width: 768px){
+  .cs-sketch-wires1  {
+    background-image: url(../images/hl-sketch-to-wires-mobile.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 2em auto;
+    padding: 70% 40%;
+    display: block;
+  }
+}
+@media screen and (max-width: 450px){
+  .cs-sketch-wires1  {
+    background-image: url(../images/hl-sketch-to-wires-mobile.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 2em auto;
+    padding: 100% 50%;
+    display: block;
+  }
+}
+.cs-hl-branding  {
+  width: 55%;
   height: auto;
   margin: 0 auto;
   padding-top: 2em;
@@ -1205,34 +1202,24 @@ strong {
   display: block;
 }
 @media screen and (max-width: 1024px){
-  .cs-sketch-wires1  {
-    max-width: 80%;
-  }
-}
-@media screen and (max-width: 768px){
-  .cs-sketch-wires1  {
-    display: none;
-  }
-}
-.cs-sketch-wires2{
-  width: 80%;
-  height: auto;
-  margin: 0 auto;
-  padding-top: 2em;
-  padding-bottom: 2em;
-  display: none;
-}
-@media screen and (max-width: 768px){
-  .cs-sketch-wires2  {
-    display: block;
-    width: 70%;
+  .cs-hl-branding  {
+    width: 80%;
     height: auto;
+    display: block;
+  }
+}
+@media screen and (max-width: 768px){
+  .cs-hl-branding  {
+    width: 85%;
+    height: auto;
+    display: block;
   }
 }
 @media screen and (max-width: 450px){
-  .cs-sketch-wires2  {
-    display: block;
+  .cs-hl-branding  {
     width: 95%;
+    height: auto;
+    display: block;
   }
 }
 .cs-full-image2  {
@@ -1258,54 +1245,25 @@ strong {
   }
 }
 .mktg-pref1 {
-  width: 70%;
-  height: auto;
-  margin: 0 auto;
-  padding-top: 2em;
-  padding-bottom: 2em;
+  background-image: url(../images/mktg-pref.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 2em auto;
+  padding: 50%;
   display: block;
 }
-
-@media screen and (max-width: 1440px){
-  .mktg-pref1  {
-    width: 80%;
-    height: auto;
-    display: block;
-  }
-}
 @media screen and (max-width: 768px){
   .mktg-pref1  {
-    display: none;
-  }
-}
-.mktg-pref2 {
-  width: 70%;
-  height: auto;
-  margin: 0 auto;
-  padding-top: 2em;
-  padding-bottom: 2em;
-  display: none;
-}
-@media screen and (max-width: 1440px){
-  .mktg-pref2  {
-    display: none;
-  }
-}
-@media screen and (max-width: 768px){
-  .mktg-pref2  {
-    width: 80%;
-    height: auto;
+    background-image: url(../images/mktg-pref-mobile.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 30% 30%;
+    margin: 2em auto;
+    padding: 70%;
     display: block;
   }
 }
-@media screen and (max-width: 450px){
-  .mktg-pref2  {
-    width: 100%;
-    height: auto;
-    display: block;
-  }
-}
-
 .cs-container-gray  {
   background-color: #F2F2F2;
   width: 100%;
