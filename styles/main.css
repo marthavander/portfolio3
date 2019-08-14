@@ -1122,39 +1122,56 @@ strong {
   }
 }
 .cs-hi-fi1{
-  background-image: url(../images/hi-fi-1.png);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  margin: -3em auto;
-  padding: 40%;
+  margin: 2em auto;
+  max-width: 90%;
   display: block;
 }
-@media screen and (max-width: 1440px){
+@media screen and (max-width: 1024px){
   .cs-hi-fi1  {
-    margin: -2em auto;
+    max-width: 95%;
+  }
+}
+@media screen and (max-width: 900px){
+  .cs-hi-fi1  {
+  display: none;
+  }
+}
+.cs-hi-fi2{
+
+  display: none;
+}
+@media screen and (max-width: 900px){
+  .cs-hi-fi2  {
+  margin: 2em auto;
+  max-width: 85%;
+  display: block;
   }
 }
 @media screen and (max-width: 768px){
-  .cs-hi-fi1  {
-    background-image: url(../images/hi-fi-2.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: 10% 10%;
+  .cs-hi-fi2  {
+  max-width: 95%;
+  display: block;
+  }
+}
+@media screen and (max-width: 600px){
+  .cs-hi-fi2  {
+  display: none;
+  }
+}
+.cs-hi-fi3{
+  display: none;
+}
+@media screen and (max-width: 600px){
+  .cs-hi-fi3  {
     margin: 2em auto;
-    padding: 70%;
+    max-width: 90%;
     display: block;
   }
 }
 @media screen and (max-width: 450px){
-  .cs-hi-fi1  {
-    background-image: url(../images/hi-fi-3.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: 3% 3%;
-    margin: 2em auto;
-    padding: 150%;
-    display: block;
+  .cs-hi-fi3  {
+  max-width: 95%;
+  display: block;
   }
 }
 .cs-sketch-wires1{
@@ -1245,22 +1262,22 @@ strong {
   }
 }
 .mktg-pref1 {
-  background-image: url(../images/mktg-pref.png);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
   margin: 2em auto;
-  padding: 50%;
+  max-width: 85%;
   display: block;
 }
 @media screen and (max-width: 768px){
   .mktg-pref1  {
-    background-image: url(../images/mktg-pref-mobile.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: 30% 30%;
+  display: none;
+  }
+}
+.mktg-pref2 {
+  display: none;
+}
+@media screen and (max-width: 768px){
+  .mktg-pref2  {
     margin: 2em auto;
-    padding: 70%;
+    width:auto;
     display: block;
   }
 }
