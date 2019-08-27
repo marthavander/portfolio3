@@ -15,7 +15,7 @@
    <meta name="viewport" content="width=device-width, initial-scale=1">
    <meta charset="UTF-8">
    <!-- Fonts -->
-   <link href="https://fonts.googleapis.com/css?family=PT+Sans&7CPT+Sans+Narrow" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow" rel="stylesheet">
    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700,700italic" rel="stylesheet" type="text/css">
    <!-- Font Awesome -->
    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
@@ -28,9 +28,9 @@
    <nav>
      <a href="index.html"><img class="mvmlogo" src="images/mvm-logo.svg" alt="Martha VanderMeulen" height="50" width="142" /></a>
      <ul class="navmenu">
+       <li class="navitem"><a class="navlink" href="about.html">ABOUT</a></li>
+       <li class="navitem"><a class="navlink" href="images/MarthaVanderMeulenResume.pdf">RESUME</a></li>
         <li class="navitem"><a class="navlink" href="mailto:marthavander@gmail.com">CONTACT</a></li>
-        <li class="navitem"><a class="navlink" href="images/MarthaVanderMeulenResume.pdf">RESUME</a></li>
-        <li class="navitem"><a class="navlink" href="about.html">ABOUT</a></li>
       </ul>
     </nav>
     <section class="cs-container-title">
@@ -39,6 +39,7 @@
     </section>
     <section class="cs-container-summary">
       <div class="cs-summary">
+        <div class="cs-summary-text">
         <h3 class="cs-head1">Summary</h3>
         <p class="cs-text">RiderTime is a Transit app. Public transportation officials in Chicago have
           added many bus routes. This has resulted in several different routes coming to the same stop.
@@ -64,6 +65,7 @@
           location.
         </p>
       </div>
+    </div>
       <div class="cs-specs-all">
       <div class="cs-specs1">
         <ul class="specs-list1">
@@ -101,43 +103,137 @@
       <h2 class="cs-section-head">User Research</h2>
       <div class="cs-category">
         <h3 class="cs-head">User Survey</h3>
-        <p class="cs-text-left">Over 80% of survey respondents use public transportation to get around
-          their own city or a city they are visiting. Most people take a bus, subway or commuter train.
-          The biggest reason respondents use public transportation is to get around cities they visit.
-          That is closely followed by people using it to commute to and from work. The frequency of
-          taking public transportation is split fairly evenly between all the time, seldom and every
-          so often. That makes me think you’re a regular user or don’t use it much at all.
+
+        <p class="cs-text-left space-bottom1">Most people take a bus, subway or commuter train when
+          using public transportation. The frequency of taking public transportation is split fairly
+          evenly between all the time, seldom and every so often.
+          That makes me think you’re a regular user or don’t use it much at all.
         </p>
-        <p class="callout-1">This survey got responses from all age groups. I feel apps are a great
+        <p class="callout-3">This survey got responses from all age groups. I feel apps are a great
           way to utilize public transportation.
         </p>
-        <p class="cs-text-left">Over half of the respondents use an app to track their public
-          transportation. All the app users agree it helps them get to where they need to go. A third
-          of these respondents use Google Maps. Moovit, Citymapper, DC Metro, New York Subway and DB
-          App are other apps that are used. All the app users are satisfied with the app they use and
-          over 80% feel the app had all the features that they needed to get to their destination. The
-          most used feature is a mobile alert that says that the bus/train is a specific number of
-          minutes away from the stop. Two other features used often are accurate, real time tracking of
-          arrivals/departures and route information. Most people were not able to pay the fare through
-          their app.
+
+        <h4>The Biggest Reasons Respondents Use Public Transportation</h4>
+        <ul class="cs-list">
+          <li class="cs-text-list">To get around cities they visit</li>
+          <li class="cs-text-list">To commute to and from work</li>
+        </ul>
+
+        <h4>Important Highlights I Learned from the Survey</h4>
+        <ul class="cs-list">
+          <li class="cs-text-list">Over half of the respondents use an app to track their public
+            transportation and aagree it helps them get to their destinations</li>
+          <li class="cs-text-list">The most popular app used was Google Maps, followed by Moovit, Citymapper,
+            DC Metro, New York Subway and DB App</li>
+          <li class="cs-text-list">All  app users are satisfied with their app and
+            over 80% feel the it had all the features that they needed</li>
+        </ul>
+        <h4>Popular Features of the Apps</h4>
+        <ul class="cs-list">
+          <li class="cs-text-list">A mobile alert that says that the bus/train is a specific number of
+          minutes away from the stop</li>
+          <li class="cs-text-list">Accurate, real time tracking of
+          arrivals/departures and route information</li>
+          <li class="cs-text-list">All  app users are satisfied with their app and
+            over 80% feel the it had all the features that they needed</li>
+        </ul>
+        <p class="cs-text-left">Clearly riders are getting a lot out of their public transportation apps.
+          One thing most people are not able to do, however, is to pay the fare through their app.
         </p>
       </div>
-      <div class="cs-category">
+
+
+      <div class="cs-chart1">
+          <h4 class="cs-charts-head">Percentage of Respondents Who Use Public Transportation in Their Own City or When Visiting Another City</h4>
+          <canvas id="myChart" width="400" height="400"></canvas>
+          <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+          <script>
+          var ctx = document.getElementById('myChart').getContext('2d');
+          var myChart = new Chart(ctx, {
+              type: 'doughnut',
+              data: {
+                  labels: ['YES', 'NO'],
+                  datasets: [{
+                      label: 'Percentage of Respondents Who Use Public Transportation in Their Own City or When Visiting Another City',
+                      data: [77.8, 22.2],
+                      backgroundColor: [
+                          'rgba(140, 64, 160)',
+                          'rgba(4, 112, 135)',
+                      ],
+                  }]
+              },
+          });
+          </script>
+        </div>
+
+        <div class="cs-chart2">
+          <h4 class="cs-charts-head">Percentage of Respondents Who Use an App to Track Public Transportation</h4>
+          <canvas id="myCharts" width="400" height="400"></canvas>
+          <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+          <script>
+          var ctx = document.getElementById('myCharts').getContext('2d');
+          var myCharts = new Chart(ctx, {
+              type: 'doughnut',
+              data: {
+                  labels: ['YES', 'NO'],
+                  datasets: [{
+                      label: 'Percentage of Respondents Who Use an App to Track Public Transportation',
+                      data: [55.2, 44.8],
+                      backgroundColor: [
+                        'rgba(140, 64, 160)',
+                          'rgba(4, 112, 135)',
+                      ],
+                  }]
+              },
+          });
+          </script>
+        </div>
+
+
+
+      <div class="cs-category space-top2">
         <h3 class="cs-head">Competitive Analysis</h3>
         <div class="competitors">
-          <p class="cs-text-left">I conducted a SWOT analysis with Transit and Google Maps. Transit’s
-             multimodal feature is interesting. It understands commuters are in a hurry and sometimes
-             buses and trains are late or not even coming at all. So it offers different options to get
-             where you need to go. Google has multiple apps that relate to each other, like their search
-             function and their map app. Not only will they tell you where your closest Starbucks is but
-             they will tell you how to get there. I must say, I feel the visual design on their Maps app
-             could be simplified somehow. It has a lot going on and it’s a little overwhelming to view.
-             Aside from that, it’s a strong app. Google may just take over the world one day. But in the
-             meantime, there are a few companies that will not go down without a fight.
+          <p class="cs-prebullet-text space-bottom1">I analyzed two competitors – Transit and Google Maps. These apps
+          have similarities like providing you the best way to get from one place to another on public transportation,
+           but they also had unique differences as well such as driving directions, which might not matter to people riding public transportation.
           </p>
-          <img class="competitive-logo" src="images/google-transit.png" alt="Google and Transit Icons" />
+          <a class="cs-button" target="_blank" href="https://docs.google.com/document/d/1YEGU7Y6OdRxqBswHA6dN57TUtvr7kORk7KiRpfwqcHU/edit?usp=sharing">VIEW SWOT ANALYSIS</a>
+          <div class="competitors space-top275">
+            <img class="competitive-logo2" src="images/google.png" alt="Google Icons" />
+            <h4>Google Maps: Postive Features</h4>
+            <ul class="cs-list-positive">
+              <li class="cs-text-list">Previous searches to choose from</li>
+              <li class="cs-text-list">Allows you to select preferred modes of transportation</li>
+              <li class="cs-text-list">Allows you to share directions</li>
+              <li class="cs-text-list">Has links to Metra and CTA</li>
+            </ul>
+            <h4>Google Maps: Negative Features</h4>
+            <ul class="cs-list">
+              <li class="cs-text-list">Not able to set work or home locations</li>
+              <li class="cs-text-list">Does not have voice directions</li>
+              <li class="cs-text-list">Does not have show next arriving bus numbers or routes at a stop</li>
+            </ul>
+          </div>
+          <div class="competitors">
+            <img class="competitive-logo2" src="images/transit.png" alt="Transit Icons" />
+            <h4>Transit: Postive Features</h4>
+            <ul class="cs-list-positive">
+              <li class="cs-text-list">Identifies your location when you launch the app</li>
+              <li class="cs-text-list">Tells you when it's time to leave or make a transfer</li>
+              <li class="cs-text-list">Has an option to see the full schedule for a bus or train</li>
+            </ul>
+            <h4>Transit: Negative Features</h4>
+            <ul class="cs-list">
+              <li class="cs-text-list">Does not have driving directions</li>
+              <li class="cs-text-list">It is not available as a website</li>
+              <li class="cs-text-list">It does not show next arriving bus numbers or routes at a stop</li>
+            </ul>
+          </div>
         </div>
-        <p class="cs-prebullet-text">If a new transportation platform wanted to enter the marketplace, I
+        <a class="cs-button" target="_blank" href="/">VIEW SWOT ANALYSIS</a>
+
+        <p class="cs-prebullet-text space-top275">If a new transportation platform wanted to enter the marketplace, I
           would give them these suggestions:</p>
         <ul class="cs-list">
           <li class="cs-text-list">Use a beautiful design with clear CTAs.</li>
@@ -194,24 +290,28 @@
       <h2 class="cs-section-head">User Testing</h2>
       <div class="cs-category">
         <h3 class="cs-head">Gathering Feedback</h3>
-        <p class="cs-text-left-spaceright">Steve Krug, a noted UX author, created a standard user testing
+        <p class="cs-prebullet-text">Steve Krug, a noted UX author, created a standard user testing
           script that I modified for RiderTime. Since I was using paper prototypes, I did my tests in person.
-          For the first task, I asked the user to walk through the process of finding out how much time they
-          needed to get from their office near the bus stop at Washington and State to go home. For the
-          second task, I asked them to walk through the process to see what the next arriving bus was at
-          the Washington and State stop.</p>
+          I asked my users to do these tasks:</p>
+        <ol class="cs-list">
+          <li class="cs-text-list">I asked the user to walk through the process of finding out how much time they
+          needed to get from their office near the bus stop at Washington and State to go home.</li>
+          <li class="cs-text-list">I asked them to walk through the process to see what the next arriving bus was at
+          the Washington and State stop.</li>
+        </ol>
         <p class="cs-text-left-spaceright">I chose 3 user testers who were regular public transit riders
           and who used apps to help them get to their destinations. All three located the stop information
           button on the first screen and agreed that’s where they would click to determine what the next
           buses were to arrive at their stop and how long it would be before their bus got to the stop.
           They understood they needed to enter the name of the bus or train stop in the next screen.
         </p>
-        <p class="cs-text-left-spaceright">On the third screen, one tester suggested I remove the number
-            sign in front of the bus line number as it wasn’t really necessary. Another tester questioned
-            the small type under the destination since I had type indicated but not specified. I took note
-            of their observations and thought about how I might apply them to the next phase of the project,
-            a high fidelity visual design.
+        <p class="cs-prebullet-text">I took note of my users' observations and thought about how I might apply
+          them to the next phase of the project, a high fidelity visual design:
         </p>
+        <ul class="cs-list">
+          <li class="cs-text-list">Remove the number sign in front of the bus line number as it wasn’t really necessary</li>
+          <li class="cs-text-list">Take out the small type under the destination since it didn't serve a specific purpose</li>
+        </ul>
       </div>
     </section>
     <section class="cs-container-gray">
@@ -231,17 +331,6 @@
           move to development. This is a great way for riders to know when their bus is coming with a quick,
           easy read.
         </p>
-        <p class="cs-text-left-spaceright">I chose 3 user testers who were regular public transit riders
-          and who used apps to help them get to their destinations. All three located the stop information
-          button on the first screen and agreed that’s where they would click to determine what the next
-          buses were to arrive at their stop and how long it would be before their bus got to the stop.
-          They understood they needed to enter the name of the bus or train stop in the next screen.</p>
-        <p class="cs-text-left-spaceright">On the third screen, one tester suggested I remove the number
-            sign in front of the bus line number as it wasn’t really necessary. Another tester questioned
-            the small type under the destination since I had type indicated but not specified. I took note
-            of their observations and thought about how I might apply them to the next phase of the project,
-            a high fidelity visual design.
-        </p>
         <a class="cs-button" target=”_blank” href="https://invis.io/KRSUU0PXSFV">VIEW PROTOTYPE</a>
       </div>
       <div class="cs-category">
@@ -259,12 +348,15 @@
         </p>
     </section>
     <footer class="footer-main">
-      <p class="footer-text">&copy;2019 Martha VanderMeulen</p>
+      <p class="footer-text">&copy;2019 Design + Development by Martha VanderMeulen</p>
       <ul class="footer-info">
         <li class="footer-social"><a target="_blank" href="https://www.behance.net/marthavandermeulen"><img class="social-icon" src="images/behance.svg" alt="behance" height="40" width="40" /></a></li>
         <li class="footer-social"><a target="_blank" href="https://www.linkedin.com/in/marthavandermeulen"><img class="social-icon" src="images/linkedin.svg" alt="linkedin" height="40" width="40" /></a></li>
         <li class="footer-social"><a target="_blank" href="mailto:marthavander@gmail.com"><img class="social-icon" src="images/email.svg" alt="email" height="40" width="40" /></a></li>
       </ul>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>

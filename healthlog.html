@@ -15,7 +15,7 @@
    <meta name="viewport" content="width=device-width, initial-scale=1">
    <meta charset="UTF-8">
    <!-- Fonts -->
-   <link href="https://fonts.googleapis.com/css?family=PT+Sans&7CPT+Sans+Narrow" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow" rel="stylesheet">
    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700,700italic" rel="stylesheet" type="text/css">
    <!-- Font Awesome -->
    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
@@ -28,9 +28,9 @@
    <nav>
      <a href="index.html"><img class="mvmlogo" src="images/mvm-logo.svg" alt="Martha VanderMeulen" height="50" width="142" /></a>
      <ul class="navmenu">
+       <li class="navitem"><a class="navlink" href="about.html">ABOUT</a></li>
+       <li class="navitem"><a class="navlink" href="images/MarthaVanderMeulenResume.pdf">RESUME</a></li>
         <li class="navitem"><a class="navlink" href="mailto:marthavander@gmail.com">CONTACT</a></li>
-        <li class="navitem"><a class="navlink" href="images/MarthaVanderMeulenResume.pdf">RESUME</a></li>
-        <li class="navitem"><a class="navlink" href="about.html">ABOUT</a></li>
       </ul>
     </nav>
     <section class="cs-container-title">
@@ -39,30 +39,32 @@
     </section>
     <section class="cs-container-summary">
       <div class="cs-summary">
-        <h3 class="cs-head1">Summary</h3>
-        <p class="cs-text">The client approached me with a request for a cloud storage product.
+        <div class="cs-summary-text">
+          <h3 class="cs-head1">Summary</h3>
+          <p class="cs-text">The client approached me with a request for a cloud storage product.
               They felt the market had room for another player, provided the right features combined
               to meet the needs of a specific audience. From my research, there was definitely a
               market for a medical information storage app. I provided research, design and testing
               for the project.
-        </p>
-        <a class="cs-button" target="_blank" href="https://invis.io/AGS4QZD9PZN">VIEW PROTOTYPE</a>
-        <h3 class="cs-head1">Problem</h3>
-        <p class="cs-text">The client wanted a unique solution for a cloud storage project.
+          </p>
+          <a class="cs-button" target="_blank" href="https://invis.io/AGS4QZD9PZN">VIEW PROTOTYPE</a>
+          <h3 class="cs-head1">Problem</h3>
+          <p class="cs-text">The client wanted a unique solution for a cloud storage project.
               My research showed me a healthcare information storage app would be a good solution.
               There are few apps in the marketplace that store and organize your complete medical
               information. The iPhone has a health app that is pretty detailed. I felt I could
               do a better job organizing the information to make an app that was simpler and
               easier to use.
-        </p>
-        <h3 class="cs-head">Solution</h3>
-        <p class="cs-text space-bottom1">Apple’s health app is has a lot of details but it doesn’t have clear
+            </p>
+            <h3 class="cs-head">Solution</h3>
+            <p class="cs-text space-bottom1">Apple’s health app is has a lot of details but it doesn’t have clear
               organization and category names. It’s also only available for one user. I created a
               solution that would work for many users. It allows organizing and sharing of medical
               information, provides medication reminders and permits emergency responders to view
               medications and allergies.
-        </p>
-      </div>
+            </p>
+          </div>
+        </div>
       <div class="cs-specs-all">
       <div class="cs-specs1">
         <ul class="specs-list1">
@@ -116,69 +118,196 @@
         <p class="callout-1">93&percnt; of people surveyed would like all of their medical information to be in one place.
         </p>
       </div>
-      <div class="cs-category">
+
+      <div class="cs-chart1">
+          <h4 class="cs-charts-head">Percentage of Respondents Who Have a Health or Exercise Related App on Their Phone</h4>
+          <canvas id="myChart" width="400" height="400"></canvas>
+          <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+          <script>
+          var ctx = document.getElementById('myChart').getContext('2d');
+          var myChart = new Chart(ctx, {
+              type: 'doughnut',
+              data: {
+                  labels: ['YES', 'NO'],
+                  datasets: [{
+                      label: 'Percentage of Respondents Who Have a Health or Exercise Related App on Their Phone',
+                      data: [67.9, 32.1],
+                      backgroundColor: [
+                          'rgba(140, 64, 160)',
+                          'rgba(4, 112, 135)',
+                      ],
+                  }]
+              },
+          });
+          </script>
+        </div>
+
+        <div class="cs-chart2">
+          <h4 class="cs-charts-head">Percentage of Respondents Who Have or Have a Family Member Who Has a Chronic Illness</h4>
+          <canvas id="myCharts" width="400" height="400"></canvas>
+          <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+          <script>
+          var ctx = document.getElementById('myCharts').getContext('2d');
+          var myCharts = new Chart(ctx, {
+              type: 'doughnut',
+              data: {
+                  labels: ['YES', 'NO'],
+                  datasets: [{
+                      label: 'Percentage of Respondents Who Have or Have a Family Member Who Has a Chronic Illness',
+                      data: [55.2, 44.8],
+                      backgroundColor: [
+                        'rgba(140, 64, 160)',
+                          'rgba(4, 112, 135)',
+                      ],
+                  }]
+              },
+          });
+          </script>
+        </div>
+
+
+
+      <div class="cs-persona-info">
         <h3 class="cs-head">Personas</h3>
-        <img class="cs-persona-pic" src="images/lily.png" alt="Persona Lily McCormick"  />
-        <p class="cs-persona-text"><strong>Lily McCormick</strong> is a 20-year old college student studying marketing.
-        She ran track and cross country in high school and has continued running in college. Lately,
-        her asthma seems to be acting up and her running times are getting slower. She knows she needs
-        to visit her doctor to get refills for her medications and talk tell him what’s been going on.
-        She gets busy with school and friends and forgets to schedule the appointments.
-        </p>
-        <img class="cs-persona-pic" src="images/jeremy.png" alt="Persona Jeremy Owens" />
-        <p class="cs-persona-text"><strong>Jeremy Owens</strong> got a college scholarship to Columbia University.
-        He wants to be a doctor to help kids who have severe allergies like he did. Growing up Jeremy had a severe
-        peanut allergy. He ended up in the emergency room several times because he couldn’t breathe. He’s outgrown
-        his peanut allergy some but he still carries his medication with him in case something happens. He loves
-        kids and would like to be a pediatric allergist one day. He understands he has to watch his own health to
-        make sure he doesn’t end up in the emergency room. He’s too busy focusing on his studies to be sick!
-        </p>
-        <img class="cs-persona-pic" src="images/elaine.png" alt="Persona Elain Nelson" />
-        <p class="cs-persona-text"><strong>Elaine Nelson</strong> is a graphic designer who works in downtown Omaha. She’s
-        married and has 2 children who are still living at home. Her children are in many activities and she helps care
-        for her elderly mother. Elaine has an underactive thyroid and high blood pressure for which she takes medications.
-        She visits about 3 doctors a year for her own conditions. She also attends her mother’s doctor’s visits when she can.
-        Elaine gets her mother’s medications from the pharmacy and helps her mother keep track of her medications. She
-        juggles a lot and sometimes feels like she’s forgetting something.
-        </p>
+        <div class="cs-persona-info">
+          <div class="cs-persona-pic">
+            <img src="images/lily.png" alt="Persona Lily McCormick"  />
+          </div>
+          <div>
+          <h4 class="cs-persona-head1">Lily McCormick: 20 year old college student studying marketing, runner, asthmatic</h4>
+          <p class="cs-persona-head2 space-top-half">Goals</p>
+          <ul class="cs-persona-list">
+            <li>Continue running in college</li>
+            <li>Visit her doctor</li>
+            <li>Get her asthma under better control</li>
+            <li>Refill her medications</li>
+          </ul>
+
+          <p class="cs-persona-head2 space-top-half">Frustrations</p>
+          <ul class="cs-persona-list">
+            <li>She's very busy with school and friends</li>
+            <li>She forgets to schedule doctor's appointments</li>
+          </ul>
+          <p class="cs-persona-head2 space-top-half">Motivations</p>
+          <ul class="cs-persona-list">
+            <li>Her running times are getting slower</li>
+            <li>Her asthma seems to be acting up</li>
+          </ul>
+        </div>
       </div>
+      <div class="cs-persona-info">
+        <div class="cs-persona-pic">
+          <img src="images/jeremy.png" alt="Persona Jeremy Owens" />
+        </div>
+
+        <h4 class="cs-persona-head1">Jeremy Owens: 18 year old college student studying medicine, had a bad peanut allergy as a kid</h4>
+        <p class="cs-persona-head2 space-top-half">Goals</p>
+        <ul class="cs-persona-list">
+          <li>He wants to be a doctor</li>
+          <li>He wants to help kids who have severe allergies like he did</li>
+          <li>He needs to make sure he's healthy as well</li>
+          <li>He needs to focus on his studies</li>
+        </ul>
+        <p class="cs-persona-head2 space-top-half">Frustrations</p>
+        <ul class="cs-persona-list">
+          <li>He doesn't have time to be sick</li>
+          <li>He doesn't want to have to go to the emergency room</li>
+        </ul>
+        <p class="cs-persona-head2 space-top-half">Motivations</p>
+        <ul class="cs-persona-list">
+          <li>Jeremy had a severe peanut allergy as a kid and understands how it feels to be sick</li>
+          <li>He loves kids and wants to help them</li>
+        </ul>
+      </div>
+
+      <div class="cs-persona-info">
+        <div class="cs-persona-pic">
+          <img src="images/elaine.png" alt="Persona Elain Nelson" />
+        </div>
+        <h4 class="cs-persona-head1">Elaine Nelson: 47 year old graphic designer from Omaha</h4>
+        <p class="cs-persona-head2 space-top-half">Goals</p>
+        <ul class="cs-persona-list">
+          <li>She wants to remember doctor's appointments</li>
+          <li>She wants to easily keep track of medications for her family</li>
+        </ul>
+        <p class="cs-persona-head2 space-top-half">Frustrations</p>
+        <ul class="cs-persona-list">
+          <li>She's very busy taking care of her family</li>
+          <li>Her children are in a lot of activities</li>
+          <li>Her mother has frequent visits to the doctors</li>
+        </ul>
+        <p class="cs-persona-head2 space-top-half">Motivations</p>
+        <ul class="cs-persona-list">
+          <li>She wants to make sure her elderly mother stays healthy as long as possible</li>
+          <li>She wants to manage her own health</li>
+          <li>She loves her family</li>
+        </ul>
+      </div>
+      </div>
+
       <div class="cs-category">
         <h3 class="cs-head">Competitive Analysis</h3>
         <p class="cs-text-left-spaceright">I analyzed three competitors – Capzule, Andaman7 and the iOS Health app. These three apps
         have similarities like name, age, medications, allergies and emergency contacts. Yet, none of them left me with a
         positive user experience. I found each of them frustrating to navigate.
         </p>
-        <div class="competitors">
-          <p class="cs-text-left">I’ve been an iPhone user for many years and never knew about the health app or its medical
-        ID feature until a nurse showed it to me recently. Apple doesn’t do a good job of educating users about it. This
-        can be good in that it’s only password protection is the touch ID or passcode, but bad because if users don’t
-        know about it, they can’t use it. It’s well hidden and unemphasized. The simplicity of it is good because
-        emergency personnel are likely familiar with it. They can quickly access a user’s medications, allergies and
-        other critical information in emergency situations.
-          </p>
-          <img class="competitive-logo" src="images/ios-health-app.png" alt="iOS Health App" />
+        <a class="cs-button" target="_blank" href="https://docs.google.com/document/d/1SQujsl0OHlVFV4FNUwAlMAaxhy1HNB_5ftG0Ko7EacU/edit?usp=sharing">VIEW SWOT ANALYSIS</a>
+
+        <div class="competitors space-top275">
+          <div class="competitive-logo">
+            <img src="images/ios-health-app.png" alt="iOS Health App" />
+          </div>
+          <h4>iOS Health App: Postive Features</h4>
+          <ul class="cs-list-positive">
+            <li class="cs-text-list">Very simple design and easy to navigate</li>
+            <li class="cs-text-list">Allows access to a user's critical information such as
+              medications and allergies by emergency personnel</li>
+          </ul>
+          <h4>iOS Health App: Negative Features</h4>
+          <ul class="cs-list">
+            <li class="cs-text-list">It's not promoted well</li>
+            <li class="cs-text-list">It's well hidden and unemphasized</li>
+          </ul>
         </div>
         <div class="competitors">
-          <p class="cs-text-left">I’ve been an iPhone user for many years and never knew about the health app or its medical
-        ID feature until a nurse showed it to me recently. Apple doesn’t do a good job of educating users about it. This
-        can be good in that it’s only password protection is the touch ID or passcode, but bad because if users don’t
-        know about it, they can’t use it. It’s well hidden and unemphasized. The simplicity of it is good because
-        emergency personnel are likely familiar with it. They can quickly access a user’s medications, allergies and
-        other critical information in emergency situations.
-          </p>
-          <img class="competitive-logo" src="images/capzule-logo.png" alt="Capzule App" />
+          <div class="competitive-logo">
+            <img src="images/capzule-logo.png" alt="Capzule App" />
+          </div>
+          <h4>Capzule: Postive Features</h4>
+          <ul class="cs-list-positive">
+            <li class="cs-text-list">Accommodates multiple users so a family can have all its records in one place</li>
+            <li class="cs-text-list">Allows syncing with devices</li>
+            <li class="cs-text-list">Has a summary that can be forwarded or printed</li>
+          </ul>
+          <h4>Capzule: Negative Features</h4>
+          <ul class="cs-list">
+            <li class="cs-text-list">UI design was confusing and launched in a bright pepto bismol pink</li>
+            <li class="cs-text-list">Pop up ads were annoying</li>
+            <li class="cs-text-list">Unclear what the icons represented</li>
+            <li class="cs-text-list">The form to enter a medication lacked adequate spacing so you didn't know where you were clicking</li>
+          </ul>
         </div>
         <div class="competitors">
-          <p class="cs-text-left">I’ve been an iPhone user for many years and never knew about the health app or its medical
-        ID feature until a nurse showed it to me recently. Apple doesn’t do a good job of educating users about it. This
-        can be good in that it’s only password protection is the touch ID or passcode, but bad because if users don’t
-        know about it, they can’t use it. It’s well hidden and unemphasized. The simplicity of it is good because
-        emergency personnel are likely familiar with it. They can quickly access a user’s medications, allergies and
-        other critical information in emergency situations.
-          </p>
-          <img class="competitive-logo" src="images/andaman7.png" alt="Andaman7 App" />
+          <div class="competitive-logo">
+            <img src="images/andaman7.png" alt="Andaman7 App" />
+          </div>
+          <h4>Andaman7: Postive Features</h4>
+          <ul class="cs-list-positive">
+            <li class="cs-text-list">Allows a patient access to clinical trials</li>
+            <li class="cs-text-list">Provides researchers access to participating patients</li>
+            <li class="cs-text-list">Can incorporate more than one user</li>
+            <li class="cs-text-list">Is free for individuals</li>
+            <li class="cs-text-list">Homepage is easy to understand</li>
+          </ul>
+          <h4>Andaman7: Negative Features</h4>
+          <ul class="cs-list">
+            <li class="cs-text-list">Navigation is difficult</li>
+            <li class="cs-text-list">Difficult to enter data and there is no clear CTA that tells you
+                what you've entered will be saved</li>
+            <li class="cs-text-list">Overall ease of use is challenging</li>
+          </ul>
         </div>
-          <p class="cs-text-left-spaceright">The user flow process for Andaman7 and Capzule were significantly more lengthy and
+        <p class="cs-text-left-spaceright">The user flow process for Andaman7 and Capzule were significantly more lengthy and
         confusing than Apple’s Medical ID. Onboarding, categorizing and saving were all lengthy for Andaman7 and
         Capzule. Apple’s editing feature was jumpy, the app kept moving to the top of the page when adding data.
         It also is significantly smaller than the other two apps and has much less capacity to hold data. There
@@ -186,7 +315,8 @@
         portals which are normally only edited by doctors and healthcare professionals. This kind of app would
         allow a patient to store all of their medical information in one place.
         </p>
-      </div>
+    </div>
+
       <p class="callout-2">As a [user role] I want [goal] so that [benefit].
       </p>
       <h3 class="cs-head">User Stories</h3>
@@ -216,8 +346,12 @@
         the iOS Health app, I knew this app needed a clear hierarchy with intuitive, easy navigation.
       </p>
       <a class="cs-button" target="_blank" href="https://invis.io/E2RUQV68PF9">VIEW USER FLOWS</a>
-      <h3 class="cs-head1">Wire Frames + User Testing</h3>
-      <p class="cs-prebullet-text">I learned a lot from user testing my wireframes. I asked users to:</p>
+      <h3 class="cs-head1 space-top1">Sketches, Wire Frames + User Testing</h3>
+      <p class="cs-text-left-spaceright">With user flows in place, I moved on to putting my ideas into sketches. This
+        me to try out different ideas before deciding on one.
+      </p>
+      <a class="cs-button" target="_blank" href="https://projects.invisionapp.com/boards/EB3ULS02S6X/">VIEW SKETCHES</a>
+      <p class="cs-prebullet-text space-top275">I learned a lot from user testing my wireframes. I asked users to:</p>
       <ul class="cs-list">
         <li class="cs-text-list">sign up for the app</li>
         <li class="cs-text-list">add a new note</li>
@@ -256,10 +390,11 @@
     </section>
     <section class="cs-container-gray">
       <div class="logo-ideas-row">
-      <img class="logo-ideas1" src="images/logo-sketches.png" alt="Logo Sketches" />
-      <img class="logo-ideas2" src="images/logos1-01.svg" alt="Logo Ideas 1" />
-      <img class="logo-ideas2" src="images/logos2-04.svg" alt="Logo Ideas 2" />
-    </div>
+        <img class="logo-ideas1" src="images/mindmap.png" alt="Mind Map" />
+        <img class="logo-ideas1" src="images/logo-sketches.png" alt="Logo Sketches" />
+        <img class="logo-ideas2" src="images/logos1-01.svg" alt="Logo Ideas 1" />
+        <img class="logo-ideas2" src="images/logos2-04.svg" alt="Logo Ideas 2" />
+      </div>
     </section>
     <section class="cs-container">
       <p class="cs-text-left-spaceright space-bottom1">
@@ -271,8 +406,11 @@
         but then gave users the option to choose their own color choice for their profile.
       </p>
     </section>
+
     <section class="cs-container-gray">
-      <img class="cs-hl-branding" src="images/branding.png" alt="Branding" />
+      <div class="cs-hl-branding">
+      <img src="images/branding.png" alt="Branding" />
+    </div>
     </section>
     <section class="cs-container">
       <p class="cs-text-left-spaceright">In order to help the logo stand out, I chose a different
@@ -281,7 +419,7 @@
         contribute to the hierarchy of the app.
       </p>
       <a class="cs-button" target="_blank" href="https://www.dropbox.com/s/6yppqict1i981hn/healthlog-styleguide.pdf?dl=0">VIEW STYLEGUIDE</a>
-      <h3 class="cs-head1">High Fidelity Design + User Testing</h3>
+      <h3 class="cs-head1 space-top1">High Fidelity Design + User Testing</h3>
       <p class="cs-text-left-spaceright space-bottom1">Armed with colors, fonts and layout ideas, I moved onto mockups.
         I carried each user’s color choice through their part of the app. It was at this stage I decided
         to add two more colors for any links and the medications + allergies section which could be
@@ -291,9 +429,11 @@
         a softness that would contribute to the positive feeling I wanted to evoke.</p>
     </section>
     <section class="cs-container-gray">
+      <div class="cs-center">
       <img class="cs-hi-fi1" src="images/hi-fi-1.png" alt="High Fidelity Visual Design" />
       <img class="cs-hi-fi2" src="images/hi-fi-2.png" alt="High Fidelity Visual Design" />
       <img class="cs-hi-fi3" src="images/hi-fi-3.png" alt="High Fidelity Visual Design" />
+    </div>
     </section>
     <section class="cs-container">
       <p class="cs-text-left-spaceright space-bottom1">In response to my wireframe tester’s comment that the
@@ -303,10 +443,11 @@
       </p>
     </section>
     <section class="cs-container-gray">
-      <img class="mktg-pref1" src="images/mktg-pref.png" alt="Preference Test and Marketing Page" />
-      <img class="mktg-pref2" src="images/mktg-pref-mobile.png" alt="Preference Test and Marketing Page" />
+      <div class="cs-full-image2">
+      <img src="images/pref-test.png" alt="Preference Test" />
+    </div>
     </section>
-    <section class="cs-container">
+    <section class="cs-container space-bottom2">
       <h3 class="cs-head">Prototypes</h3>
       <p class="cs-text-left-spaceright">To complete the app, I added account and profile screens, a
         marketing landing page and the app icon. I did a preference test for the icon to decide between
@@ -314,7 +455,14 @@
         to be tested.
       </p>
       <a class="cs-button" target="_blank" href="https://invis.io/AGS4QZD9PZN">VIEW PROTOTYPE</a>
-      <h2 class="cs-section-head space-top2">Final User Testing</h2>
+    </section>
+    <section class="cs-container-gray">
+      <div class="cs-full-image2">
+        <img src="images/mktg-page.png" alt="Marketing Page" />
+      </div>
+    </section>
+    <section class="cs-container">
+      <h2 class="cs-section-head">Final User Testing</h2>
       <div class="cs-category">
         <h3 class="cs-head">The Last Test</h3>
       <p class="cs-prebullet-text">I ran three final tests asking users to:</p>
@@ -330,7 +478,7 @@
         didn’t make any changes. I did, however, update colors to pass AA accessibility for not just
         larger sized text but normal sized text as well.
       </p>
-      <h3 class="cs-head">Conclusion</h3>
+      <h3 class="cs-head space-top2">Conclusion</h3>
       <p class="cs-text-left-spaceright">The most important thing I learned is the importance of testing.
         I’ve been a designer for a long time and I had some strong feelings. But that’s not what this
         process is about. It isn’t about which design I prefer, it’s which one the user prefers and why
@@ -352,12 +500,15 @@
     </div>
     </section>
     <footer class="footer-main">
-      <p class="footer-text">&copy;2019 Martha VanderMeulen</p>
+      <p class="footer-text">&copy;2019 Design + Development by Martha VanderMeulen</p>
       <ul class="footer-info">
         <li class="footer-social"><a target="_blank" href="https://www.behance.net/marthavandermeulen"><img class="social-icon" src="images/behance.svg" alt="behance" height="40" width="40" /></a></li>
         <li class="footer-social"><a target="_blank" href="https://www.linkedin.com/in/marthavandermeulen"><img class="social-icon" src="images/linkedin.svg" alt="linkedin" height="40" width="40" /></a></li>
         <li class="footer-social"><a target="_blank" href="mailto:marthavander@gmail.com"><img class="social-icon" src="images/email.svg" alt="email" height="40" width="40" /></a></li>
       </ul>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>
